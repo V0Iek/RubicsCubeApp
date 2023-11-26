@@ -1,4 +1,5 @@
 from random import randint
+from os import system, name
 
 
 cube = [
@@ -34,6 +35,11 @@ cube = [
     ]
 ]
 
+def clear():
+    if name == "nt":
+        system("cls")
+    else:
+        system("clear")
 
 def print_row(cube, side, row):
     print(cube[side][row][0] + cube[side][row][1] + cube[side][row][2])
@@ -91,33 +97,36 @@ def scramble(cube):
             side_turn(cube, y, z)
             print("Side " + str(y) + " " + str(z))
 
-def solve(cube):
-    if cube[0][1][1] != ["W"]:
-        if cube[1][1][1] == ["W"]:
-            vertical_turn(cube, 1, 0)
-        elif cube[3][1][1]:
-            vertical_turn(cube, 1, 0)
-            vertical_turn(cube, 1, 0)
+#def solve(cube):
+
+def playground():
+    choose1 = 0
+    while choose1 != "1":
+        clear()
+        print_cube(cube)
+        print("Aby wyjść wybierz 1")
+        choose1 = input()
 
 
-vertical_turn(cube, 1, 1)
-print_cube(cube)
-solve(cube)
-print_cube(cube)
-
-# choose = 0
-# while choose != 4:
-#     print("Co chcesz zrobić?")
-#     print("  1. Wyświetlić kostkę")
-#     print("  2. Wymieszać kostkę")
-#     print("  3. Ułożyć kostkę")
-#     print("  4. Wyjść")
-#     choose = input()
-#     if choose == 1:
-#         print_cube(cube)
-#     elif choose == 2:
-#         scramble(cube)
-#     elif choose == 3:
-#         solve(cube)
-#     else:
-#         pass
+choose = 0
+clear()
+while choose != 5:
+    print("Co chcesz zrobić?")
+    print("  1. Wyświetlić kostkę")
+    print("  2. Wymieszać kostkę")
+    print("  3. Ułożyć kostkę")
+    print("  4. Playground")
+    print("  5. Wyjść")
+    choose = int(input())
+    clear()
+    if choose == 1:
+        print_cube(cube)
+    elif choose == 2:
+        scramble(cube)
+    #elif choose == 3:
+        #solve(cube)
+    elif choose == 4:
+        playground()
+        clear()
+    else:
+        exit
