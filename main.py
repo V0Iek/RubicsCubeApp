@@ -1,39 +1,41 @@
 from random import randint
 from os import system, name
+from colorama import Fore, Style, init
 
 
 cube = [
-    [   # Top = 0
-        [["W"], ["W"], ["W"]],
-        [["W"], ["W"], ["W"]],
-        [["W"], ["W"], ["W"]]
+    [
+        [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"],
+        [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"],
+        [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"]
     ],
-    [ # Front = 1
-        [["B"], ["B"], ["B"]],
-        [["B"], ["B"], ["B"]],
-        [["B"], ["B"], ["B"]]
+    [
+        [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"],
+        [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"],
+        [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"]
     ],
-    [ # Right = 2
-        [["O"], ["O"], ["O"]],
-        [["O"], ["O"], ["O"]],
-        [["O"], ["O"], ["O"]]
+    [
+        [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"],
+        [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"],
+        [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"]
     ],
-    [ # Back = 3
-        [["G"], ["G"], ["G"]],
-        [["G"], ["G"], ["G"]],
-        [["G"], ["G"], ["G"]]
+    [
+        [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"],
+        [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"],
+        [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"]
     ],
-    [ # Left = 4
-        [["R"], ["R"], ["R"]],
-        [["R"], ["R"], ["R"]],
-        [["R"], ["R"], ["R"]]
+    [
+        [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"],
+        [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"],
+        [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"]
     ],
-    [ # Bottom = 5
-        [["Y"], ["Y"], ["Y"]],
-        [["Y"], ["Y"], ["Y"]],
-        [["Y"], ["Y"], ["Y"]]
+    [
+        [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"],
+        [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"],
+        [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"]
     ]
 ]
+
 
 def clear():
     if name == "nt":
@@ -42,7 +44,7 @@ def clear():
         system("clear")
 
 def print_row(cube, side, row):
-    print(cube[side][row][0] + cube[side][row][1] + cube[side][row][2])
+    print("".join(cube[side][row]))
 
 def print_side(cube, side):
     print_row(cube, side, 0)
@@ -52,9 +54,9 @@ def print_side(cube, side):
 def print_cube(cube):
     print_side(cube, 0)
 
-    print(cube[1][0], cube[2][0], cube[3][0], cube[4][0])
-    print(cube[1][1], cube[2][1], cube[3][1], cube[4][1])
-    print(cube[1][2], cube[2][2], cube[3][2], cube[4][2])
+    print("".join(cube[1][0]), "".join(cube[2][0]), "".join(cube[3][0]), "".join(cube[4][0]))
+    print("".join(cube[1][1]), "".join(cube[2][1]), "".join(cube[3][1]), "".join(cube[4][1]))
+    print("".join(cube[1][2]), "".join(cube[2][2]), "".join(cube[3][2]), "".join(cube[4][2]))
 
     print_side(cube, 5)
     print("\n")
@@ -108,8 +110,13 @@ def playground():
         choose1 = input()
 
 
+# Initial actions
+init(autoreset = True)
 choose = 0
 clear()
+
+
+# Main loop
 while choose != 5:
     print("Co chcesz zrobić?")
     print("  1. Wyświetlić kostkę")
