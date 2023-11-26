@@ -1,14 +1,11 @@
-from random import randint
 from os import system, name
 from colorama import Fore, Style, init
 
-from cube import solved_cube, print_cube
-from moves import horizontal_turn, vertical_turn, side_turn
-from translate import translate
+from cube import RubicsCube
 from playground import playground
 
 
-cube = solved_cube
+cube = RubicsCube()
 
 
 def clear():
@@ -16,26 +13,6 @@ def clear():
         system("cls")
     else:
         system("clear")
-
-
-def scramble(cube):
-    for i in range(0, 20):
-        x = randint(0, 2)
-        y = randint(0, 2)
-        z = randint(0, 1)
-        if(x == 0):
-            horizontal_turn(cube, y, z)
-            print(translate("horizontal", y, z))
-        elif(x == 1):
-            vertical_turn(cube, y, z)
-            print(translate("vertical", y, z))
-        elif(x == 2):
-            side_turn(cube, y, z)
-            print(translate("side", y, z))
-
-
-def solve(cube):
-    cube = solved_cube
 
 
 # Initial actions
@@ -55,11 +32,11 @@ while choose != 5:
     choose = int(input())
     clear()
     if choose == 1:
-        print_cube(cube)
+        cube.print_cube()
     elif choose == 2:
-        scramble(cube)
+        cube.scramble()
     elif choose == 3:
-        solve(cube)
+        cube = RubicsCube()
     elif choose == 4:
         playground(cube)
         clear()
