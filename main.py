@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from os import system, name
 from colorama import Fore, Style, init
 

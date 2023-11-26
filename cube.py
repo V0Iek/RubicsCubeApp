@@ -38,6 +38,7 @@ class RubicsCube:
             ]
         ]
 
+
     def print_row(self, side, row):
         print("".join(self.state[side][row]))
 
@@ -81,7 +82,8 @@ class RubicsCube:
 
     def scramble(self):
         for i in range(0, 20):
-            x = randint(0, 2)
+            x = 1
+            #x = randint(0, 2)
             y = randint(0, 2)
             z = randint(0, 1)
             if x == 0:

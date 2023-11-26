@@ -21,9 +21,9 @@ def translate(type, row, direction):
     elif type == "vertical":
         if row == 0:
             if direction == 0:
-                return "L"
-            elif direction == 1:
                 return "L'"
+            elif direction == 1:
+                return "L"
 
         elif row == 1:
             if direction == 0:
@@ -33,9 +33,9 @@ def translate(type, row, direction):
 
         elif row == 2:
             if direction == 0:
-                return "R'"
-            elif direction == 1:
                 return "R"
+            elif direction == 1:
+                return "R'"
 
     elif type == "side":
         if row == 0:
