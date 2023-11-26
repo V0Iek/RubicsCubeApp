@@ -82,8 +82,7 @@ class RubicsCube:
 
     def scramble(self):
         for i in range(0, 20):
-            x = 1
-            #x = randint(0, 2)
+            x = randint(0, 2)
             y = randint(0, 2)
             z = randint(0, 1)
             if x == 0:
