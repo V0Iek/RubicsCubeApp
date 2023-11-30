@@ -7,34 +7,34 @@ class RubicsCube:
     def __init__(self):
         self.state = [
             [
-                [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"],
-                [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"],
-                [f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}", f"{Fore.WHITE}W{Style.RESET_ALL}"]
+                [(255, 255, 255), (255, 255, 255), (255, 255, 255)],
+                [(255, 255, 255), (255, 255, 255), (255, 255, 255)],
+                [(255, 255, 255), (255, 255, 255), (255, 255, 255)]
             ],
             [
-                [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"],
-                [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"],
-                [f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}", f"{Fore.BLUE}B{Style.RESET_ALL}"]
+                [(0, 0, 255), (0, 0, 255), (0, 0, 255)],
+                [(0, 0, 255), (0, 0, 255), (0, 0, 255)],
+                [(0, 0, 255), (0, 0, 255), (0, 0, 255)]
             ],
             [
-                [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"],
-                [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"],
-                [f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}", f"{Fore.MAGENTA}O{Style.RESET_ALL}"]
+                [(255, 128, 0), (255, 128, 0), (255, 128, 0)],
+                [(255, 128, 0), (255, 128, 0), (255, 128, 0)],
+                [(255, 128, 0), (255, 128, 0), (255, 128, 0)]
             ],
             [
-                [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"],
-                [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"],
-                [f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}", f"{Fore.GREEN}G{Style.RESET_ALL}"]
+                [(0, 255, 0), (0, 255, 0), (0, 255, 0)],
+                [(0, 255, 0), (0, 255, 0), (0, 255, 0)],
+                [(0, 255, 0), (0, 255, 0), (0, 255, 0)]
             ],
             [
-                [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"],
-                [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"],
-                [f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}", f"{Fore.RED}R{Style.RESET_ALL}"]
+                [(255, 0, 0), (255, 0, 0), (255, 0, 0)],
+                [(255, 0, 0), (255, 0, 0), (255, 0, 0)],
+                [(255, 0, 0), (255, 0, 0), (255, 0, 0)]
             ],
             [
-                [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"],
-                [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"],
-                [f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}", f"{Fore.YELLOW}Y{Style.RESET_ALL}"]
+                [(255, 255, 0), (255, 255, 0), (255, 255, 0)],
+                [(255, 255, 0), (255, 255, 0), (255, 255, 0)],
+                [(255, 255, 0), (255, 255, 0), (255, 255, 0)]
             ]
         ]
 
