@@ -5,6 +5,9 @@ from translate import translate
 
 class RubicsCube:
     def __init__(self):
+        self.reset()
+    
+    def reset(self):
         self.state = [
             [
                 [(255, 255, 255), (255, 255, 255), (255, 255, 255)],
@@ -37,25 +40,6 @@ class RubicsCube:
                 [(255, 255, 0), (255, 255, 0), (255, 255, 0)]
             ]
         ]
-
-
-    def print_row(self, side, row):
-        print("".join(self.state[side][row]))
-
-    def print_side(self, side):
-        self.print_row(side, 0)
-        self.print_row(side, 1)
-        self.print_row(side, 2)
-
-    def print_cube(self):
-        self.print_side(0)
-
-        print("".join(self.state[1][0]), "".join(self.state[2][0]), "".join(self.state[3][0]), "".join(self.state[4][0]))
-        print("".join(self.state[1][1]), "".join(self.state[2][1]), "".join(self.state[3][1]), "".join(self.state[4][1]))
-        print("".join(self.state[1][2]), "".join(self.state[2][2]), "".join(self.state[3][2]), "".join(self.state[4][2]))
-
-        self.print_side(5)
-        print("\n")
 
 
     def horizontal_turn(self, row, direction):
