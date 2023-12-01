@@ -1,13 +1,10 @@
-from os import system, name
-
 from cube import RubicsCube
 
-def clear():
-    if name == "nt":
-        system("cls")
-    else:
-        system("clear")
 
+def playground(cube):
+    print("Playground")
+
+"""
 def playground(cube):
     choose = 0
     while choose != "1":
@@ -53,3 +50,4 @@ def playground(cube):
             cube.side_turn(2, 1)
         elif choose == "B'":
             cube.side_turn(2, 0)
+"""

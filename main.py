@@ -62,7 +62,15 @@ def newCube():
     draw_cube()
 
 def playgnd():
-    print("Playground")
+    playground(cube)
+    
+    global buttons
+    buttons = []
+
+    screen.fill(background_color)
+    draw_cube()
+
+    pygame.display.update()
 
 def ext():
     global running
@@ -73,12 +81,14 @@ def ext():
 size = width, height = (800, 800)
 rect_size = int(width / 15)
 
+background_color = (50, 50, 50)
+
 cube = RubicsCube()
 
-btn_scramble = Button(width / 4 - width / 8, height * .8, 200, 50, "Wymieszaj kostkę", (128, 128, 128), (0, 128, 128), scramble)
-btn_solve = Button(width / 2 + width / 8, height * .8, 200, 50, "Ułóż kostkę", (128, 128, 128), (0, 128, 128), newCube)
-btn_playground = Button(width / 4 - width / 8, height * .9, 200, 50, "Playground", (128, 128, 128), (0, 128, 128), playgnd)
-btn_exit = Button(width / 2 + width / 8, height * .9, 200, 50, "Wyjście", (128, 128, 128), (0, 128, 128), ext)
+btn_scramble = Button(width / 4 - width / 8, height * .8, width / 2, 50, "Wymieszaj kostkę", (128, 128, 128), (0, 128, 128), scramble)
+btn_solve = Button(width / 2 + width / 8, height * .8, width / 2, 50, "Ułóż kostkę", (128, 128, 128), (0, 128, 128), newCube)
+btn_playground = Button(width / 4 - width / 8, height * .9, width / 2, 50, "Playground", (128, 128, 128), (0, 128, 128), playgnd)
+btn_exit = Button(width / 2 + width / 8, height * .9, width / 2, 50, "Wyjście", (128, 128, 128), (0, 128, 128), ext)
 
 buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 
@@ -89,6 +99,7 @@ running = True
 
 screen = pygame.display.set_mode(size)
 pygame.display.set_caption("Rubics Cube Lerner")
+screen.fill(background_color)
 
 draw_cube()
 

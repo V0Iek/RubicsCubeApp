@@ -99,10 +99,10 @@ class RubicsCube:
             z = randint(0, 1)
             if x == 0:
                 self.horizontal_turn(y, z)
-                print(translate("horizontal", y, z))
+                #print(translate("horizontal", y, z))
             elif x == 1:
                 self.vertical_turn(y, z)
-                print(translate("vertical", y, z))
+                #print(translate("vertical", y, z))
             elif x == 2:
                 self.side_turn(y, z)
-                print(translate("side", y, z))
+                #print(translate("side", y, z))
