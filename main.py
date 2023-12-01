@@ -59,6 +59,7 @@ def scramble():
 
 def newCube():
     cube.reset()
+    draw_cube()
 
 def playgnd():
     print("Playground")
