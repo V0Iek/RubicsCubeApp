@@ -65,6 +65,7 @@ def playgnd():
     print("Playground")
 
 def ext():
+    global running
     running = False
 
 
