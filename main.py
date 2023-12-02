@@ -97,7 +97,7 @@ buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 pygame.init()
 running = True
 
-screen = pygame.display.set_mode(size)
+screen = pygame.display.set_mode(size, pygame.RESIZABLE)
 pygame.display.set_caption("Rubics Cube Lerner")
 screen.fill(background_color)
 
