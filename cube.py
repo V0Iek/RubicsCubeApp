@@ -1,7 +1,7 @@
-from colorama import Fore, Style, init
 from random import randint
+import pygame as pg
 
-from translate import translate
+#from translate import translate
 
 class RubicsCube:
     def __init__(self):
@@ -58,6 +58,7 @@ class RubicsCube:
                 elif row == 2:
                     self.state[5][0][0], self.state[5][0][1], self.state[5][0][2], self.state[5][1][2], self.state[5][2][2], self.state[5][2][1], self.state[5][2][0], self.state[5][1][0] = self.state[5][2][0], self.state[5][1][0], self.state[5][0][0], self.state[5][0][1], self.state[5][0][2], self.state[5][1][2], self.state[5][2][2], self.state[5][2][1]
 
+
     def vertical_turn(self, row, direction):
         if (row >= 0 and row <= 2) and (direction == 0 or direction == 1):
             if direction == 0: # Up
@@ -67,13 +68,13 @@ class RubicsCube:
                 elif row == 2:
                     self.state[2][0][0], self.state[2][0][1], self.state[2][0][2], self.state[2][1][2], self.state[2][2][2], self.state[2][2][1], self.state[2][2][0], self.state[2][1][0] = self.state[2][2][0], self.state[2][1][0], self.state[2][0][0], self.state[2][0][1], self.state[2][0][2], self.state[2][1][2], self.state[2][2][2], self.state[2][2][1]
                 
-
             elif direction == 1: # Down
                 self.state[0][0][row], self.state[0][1][row], self.state[0][2][row], self.state[1][0][row], self.state[1][1][row], self.state[1][2][row], self.state[5][0][row], self.state[5][1][row], self.state[5][2][row], self.state[3][0][2 - row], self.state[3][1][2 - row], self.state[3][2][2 - row] = self.state[3][2][2 - row], self.state[3][1][2 - row], self.state[3][0][2 - row], self.state[0][0][row], self.state[0][1][row], self.state[0][2][row], self.state[1][0][row], self.state[1][1][row], self.state[1][2][row], self.state[5][2][row], self.state[5][1][row], self.state[5][0][row]
                 if row == 0:
                     self.state[4][0][0], self.state[4][0][1], self.state[4][0][2], self.state[4][1][2], self.state[4][2][2], self.state[4][2][1], self.state[4][2][0], self.state[4][1][0] = self.state[4][2][0], self.state[4][1][0], self.state[4][0][0], self.state[4][0][1], self.state[4][0][2], self.state[4][1][2], self.state[4][2][2], self.state[4][2][1]
                 elif row == 2:
                     self.state[2][0][0], self.state[2][0][1], self.state[2][0][2], self.state[2][1][2], self.state[2][2][2], self.state[2][2][1], self.state[2][2][0], self.state[2][1][0] = self.state[2][0][2], self.state[2][1][2], self.state[2][2][2], self.state[2][2][1], self.state[2][2][0], self.state[2][1][0], self.state[2][0][0], self.state[2][0][1]
+                    
 
     def side_turn(self, row, direction):
         if (row >= 0 and row <= 2) and (direction == 0 or direction == 1):
@@ -106,3 +107,58 @@ class RubicsCube:
             elif x == 2:
                 self.side_turn(y, z)
                 #print(translate("side", y, z))
+
+
+    def U(self):
+        self.horizontal_turn(0, 0)
+
+    def Up(self):
+        self.horizontal_turn(0, 1)
+
+    def E(self):
+        self.horizontal_turn(1, 1)
+
+    def Ep(self):
+        self.horizontal_turn(1, 0)
+
+    def D(self):
+        self.horizontal_turn(2, 1)
+
+    def Dp(self):
+        self.horizontal_turn(2, 0)
+
+    def L(self):
+        self.vertical_turn(0, 1)
+
+    def Lp(self):
+        self.vertical_turn(0, 0)
+
+    def M(self):
+        self.vertical_turn(1, 1)
+
+    def Mp(self):
+        self.vertical_turn(1, 0)
+
+    def R(self):
+        self.vertical_turn(2, 0)
+
+    def Rp(self):
+        self.vertical_turn(2, 1)
+
+    def F(self):
+        self.side_turn(0, 0)
+
+    def Fp(self):
+        self.side_turn(0, 1)
+
+    def S(self):
+        self.side_turn(1, 0)
+
+    def Sp(self):
+        self.side_turn(1, 1)
+
+    def B(self):
+        self.side_turn(2, 1)
+
+    def Bp(self):
+        self.side_turn(2, 0)
