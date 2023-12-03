@@ -37,7 +37,7 @@ def draw_side(index, x, y):
                 screen,
                 cube.state[index][l][p],
                 (
-                    int(p * rect_size * 1.1 + rect_size * 3.4 * x),
+                    int(p * rect_size * 1.1 + rect_size * 3.4 * x + width / 4),
                     int(l * rect_size * 1.1 + rect_size * 3.4 * y),
                     rect_size,
                     rect_size
