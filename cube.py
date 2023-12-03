@@ -1,7 +1,7 @@
 from random import randint
 import pygame as pg
 
-#from translate import translate
+from translate import translate
 
 class RubicsCube:
     def __init__(self):
@@ -94,19 +94,22 @@ class RubicsCube:
 
 
     def scramble(self):
+        moves = ""
         for i in range(0, 20):
             x = randint(0, 2)
             y = randint(0, 2)
             z = randint(0, 1)
             if x == 0:
                 self.horizontal_turn(y, z)
-                #print(translate("horizontal", y, z))
+                moves += translate("horizontal", y, z) + " "
             elif x == 1:
                 self.vertical_turn(y, z)
-                #print(translate("vertical", y, z))
+                moves += translate("vertical", y, z) + " "
             elif x == 2:
                 self.side_turn(y, z)
-                #print(translate("side", y, z))
+                moves += translate("side", y, z) + " "
+
+        return moves
 
 
     def U(self):
