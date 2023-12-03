@@ -4,7 +4,6 @@ import pygame as pg
 
 from cube import RubicsCube
 import translate as tr
-#from playground import playground
 
 
 # Klasy
@@ -38,8 +37,8 @@ def draw_side(index, x, y):
                 screen,
                 cube.state[index][l][p],
                 (
-                    int(p * rect_size * 1.1 + rect_size * 3.3 * x),
-                    int(l * rect_size * 1.1 + rect_size * 3.3 * y),
+                    int(p * rect_size * 1.1 + rect_size * 3.4 * x),
+                    int(l * rect_size * 1.1 + rect_size * 3.4 * y),
                     rect_size,
                     rect_size
                 )
@@ -63,25 +62,25 @@ def newCube():
     draw_cube()
 
 def playground():
-    btn_u = Button(10, 600, 50, 50, "U", (128, 128, 128), (0, 128, 128), cube.U)
-    btn_up = Button(70, 600, 50, 50, "U'", (128, 128, 128), (0, 128, 128), cube.Up)
-    btn_e = Button(130, 600, 50, 50, "E", (128, 128, 128), (0, 128, 128), cube.E)
-    btn_ep = Button(190, 600, 50, 50, "E'", (128, 128, 128), (0, 128, 128), cube.Ep)
-    btn_d = Button(250, 600, 50, 50, "D", (128, 128, 128), (0, 128, 128), cube.D)
-    btn_dp = Button(310, 600, 50, 50, "D'", (128, 128, 128), (0, 128, 128), cube.Dp)
-    btn_l = Button(370, 600, 50, 50, "L", (128, 128, 128), (0, 128, 128), cube.L)
-    btn_lp = Button(430, 600, 50, 50, "L'", (128, 128, 128), (0, 128, 128), cube.Lp)
-    btn_m = Button(490, 600, 50, 50, "M", (128, 128, 128), (0, 128, 128), cube.M)
-    btn_mp = Button(10, 700, 50, 50, "M'", (128, 128, 128), (0, 128, 128), cube.Mp)
-    btn_r = Button(70, 700, 50, 50, "R", (128, 128, 128), (0, 128, 128), cube.R)
-    btn_rp = Button(130, 700, 50, 50, "R'", (128, 128, 128), (0, 128, 128), cube.Rp)
-    btn_f = Button(190, 700, 50, 50, "F", (128, 128, 128), (0, 128, 128), cube.F)
-    btn_fp = Button(250, 700, 50, 50, "F'", (128, 128, 128), (0, 128, 128), cube.Fp)
-    btn_s = Button(310, 700, 50, 50, "S", (128, 128, 128), (0, 128, 128), cube.S)
-    btn_sp = Button(370, 700, 50, 50, "S'", (128, 128, 128), (0, 128, 128), cube.Sp)
-    btn_b = Button(430, 700, 50, 50, "B", (128, 128, 128), (0, 128, 128), cube.B)
-    btn_bp = Button(490, 700, 50, 50, "B'", (128, 128, 128), (0, 128, 128), cube.Bp)
-    btn_back = Button(550, 650, 100, 50, "Back", (128, 128, 128), (0, 128, 128), back)
+    btn_u = Button(10, height * .8, 50, 50, "U", (128, 128, 128), (0, 128, 128), cube.U)
+    btn_up = Button(70, height * .8, 50, 50, "U'", (128, 128, 128), (0, 128, 128), cube.Up)
+    btn_e = Button(130, height * .8, 50, 50, "E", (128, 128, 128), (0, 128, 128), cube.E)
+    btn_ep = Button(190, height * .8, 50, 50, "E'", (128, 128, 128), (0, 128, 128), cube.Ep)
+    btn_d = Button(250, height * .8, 50, 50, "D", (128, 128, 128), (0, 128, 128), cube.D)
+    btn_dp = Button(310, height * .8, 50, 50, "D'", (128, 128, 128), (0, 128, 128), cube.Dp)
+    btn_l = Button(370, height * .8, 50, 50, "L", (128, 128, 128), (0, 128, 128), cube.L)
+    btn_lp = Button(430, height * .8, 50, 50, "L'", (128, 128, 128), (0, 128, 128), cube.Lp)
+    btn_m = Button(490, height * .8, 50, 50, "M", (128, 128, 128), (0, 128, 128), cube.M)
+    btn_mp = Button(10, height * .9, 50, 50, "M'", (128, 128, 128), (0, 128, 128), cube.Mp)
+    btn_r = Button(70, height * .9, 50, 50, "R", (128, 128, 128), (0, 128, 128), cube.R)
+    btn_rp = Button(130, height * .9, 50, 50, "R'", (128, 128, 128), (0, 128, 128), cube.Rp)
+    btn_f = Button(190, height * .9, 50, 50, "F", (128, 128, 128), (0, 128, 128), cube.F)
+    btn_fp = Button(250, height * .9, 50, 50, "F'", (128, 128, 128), (0, 128, 128), cube.Fp)
+    btn_s = Button(310, height * .9, 50, 50, "S", (128, 128, 128), (0, 128, 128), cube.S)
+    btn_sp = Button(370, height * .9, 50, 50, "S'", (128, 128, 128), (0, 128, 128), cube.Sp)
+    btn_b = Button(430, height * .9, 50, 50, "B", (128, 128, 128), (0, 128, 128), cube.B)
+    btn_bp = Button(490, height * .9, 50, 50, "B'", (128, 128, 128), (0, 128, 128), cube.Bp)
+    btn_back = Button(550, height * .85, 100, 50, "Back", (128, 128, 128), (0, 128, 128), back)
 
     global buttons
     buttons = [btn_u, btn_up, btn_e, btn_ep, btn_d, btn_dp, btn_l, btn_lp, btn_m, btn_mp, btn_r, btn_rp, btn_f, btn_fp, btn_s, btn_sp, btn_b, btn_bp, btn_back]
@@ -106,17 +105,17 @@ def ext():
 
 
 # Zmienne
-size = width, height = (800, 800)
-rect_size = int(width / 15)
+size = width, height = (1920, 1080)
+rect_size = int(height / 15)
 
 background_color = (50, 50, 50)
 
 cube = RubicsCube()
 
-btn_scramble = Button(width / 4 - width / 8, height * .8, width / 2, 50, "Wymieszaj kostkę", (128, 128, 128), (0, 128, 128), scramble)
-btn_solve = Button(width / 2 + width / 8, height * .8, width / 2, 50, "Ułóż kostkę", (128, 128, 128), (0, 128, 128), newCube)
-btn_playground = Button(width / 4 - width / 8, height * .9, width / 2, 50, "Playground", (128, 128, 128), (0, 128, 128), playground)
-btn_exit = Button(width / 2 + width / 8, height * .9, width / 2, 50, "Wyjście", (128, 128, 128), (0, 128, 128), ext)
+btn_scramble = Button(width * .05, height * .8, width / 5 * 2, 50, "Wymieszaj kostkę", (128, 128, 128), (0, 128, 128), scramble)
+btn_solve = Button(width / 2 + width * .05, height * .8, width / 5 * 2, 50, "Ułóż kostkę", (128, 128, 128), (0, 128, 128), newCube)
+btn_playground = Button(width * .05, height * .9, width / 5 * 2, 50, "Playground", (128, 128, 128), (0, 128, 128), playground)
+btn_exit = Button(width / 2 + width * .05, height * .9, width / 5 * 2, 50, "Wyjście", (128, 128, 128), (0, 128, 128), ext)
 
 buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 
@@ -125,7 +124,7 @@ buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 pg.init()
 running = True
 
-screen = pg.display.set_mode(size, pg.RESIZABLE)
+screen = pg.display.set_mode(size) # pg.RESIZABLE
 pg.display.set_caption("Rubics Cube Lerner")
 screen.fill(background_color)
 
