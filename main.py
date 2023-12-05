@@ -30,36 +30,13 @@ class Button:
 
 
 # Funkcje
-def draw_side(index, x, y):
-    for l in range(3):
-        for p in range(3):
-            pg.draw.rect(
-                screen,
-                cube.state[index][l][p],
-                (
-                    int(p * rect_size * 1.1 + rect_size * 3.4 * x + width / 4),
-                    int(l * rect_size * 1.1 + rect_size * 3.4 * y),
-                    rect_size,
-                    rect_size
-                )
-            )
-
-def draw_cube():
-    draw_side(0, 1, 0)
-    draw_side(4, 0, 1)
-    draw_side(1, 1, 1)
-    draw_side(2, 2, 1)
-    draw_side(3, 3, 1)
-    draw_side(5, 1, 2)
-    pg.display.update()
-
 def scramble():
     cube.scramble()
-    draw_cube()
+    cube.draw_cube(screen)
 
 def newCube():
     cube.reset()
-    draw_cube()
+    cube.draw_cube(screen)
 
 def playground():
     btn_u = Button(10, height * .8, 50, 50, "U", (128, 128, 128), (0, 128, 128), cube.U)
@@ -86,7 +63,7 @@ def playground():
     buttons = [btn_u, btn_up, btn_e, btn_ep, btn_d, btn_dp, btn_l, btn_lp, btn_m, btn_mp, btn_r, btn_rp, btn_f, btn_fp, btn_s, btn_sp, btn_b, btn_bp, btn_back]
 
     screen.fill(background_color)
-    draw_cube()
+    cube.draw_cube(screen)
 
     pg.display.update()
 
@@ -95,7 +72,7 @@ def back():
     buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 
     screen.fill(background_color)
-    draw_cube()
+    cube.draw_cube(screen)
 
     pg.display.update()
 
@@ -106,7 +83,6 @@ def ext():
 
 # Zmienne
 size = width, height = (1920, 1080)
-rect_size = int(height / 15)
 
 background_color = (50, 50, 50)
 
@@ -128,7 +104,7 @@ screen = pg.display.set_mode(size) # pg.RESIZABLE
 pg.display.set_caption("Rubics Cube Lerner")
 screen.fill(background_color)
 
-draw_cube()
+cube.draw_cube(screen)
 
 
 # Glowna petla
@@ -137,11 +113,11 @@ while running:
         if event.type == pg.QUIT:
             running = False
 
-        elif event.type == pg.VIDEORESIZE:
-            if width > height:
-                rect_size = int(height / 15)
-            else:
-                rect_size = int(width / 15)
+        # elif event.type == pg.VIDEORESIZE:
+        #     if width > height:
+        #         rect_size = int(height / 15)
+        #     else:
+        #         rect_size = int(width / 15)
 
         for button in buttons:
             button.handle_event(event)
@@ -153,7 +129,7 @@ while running:
         else:
             button.draw(button.color)
 
-    draw_cube()
+    cube.draw_cube(screen)
     pg.display.flip()
 
 

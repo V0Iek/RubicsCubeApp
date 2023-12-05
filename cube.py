@@ -42,6 +42,31 @@ class RubicsCube:
         ]
 
 
+    def draw_side(self, screen, index, x, y):
+        rect_size = int(screen.get_height() / 15)
+        for l in range(3):
+            for p in range(3):
+                pg.draw.rect(
+                    screen,
+                    self.state[index][l][p],
+                    (
+                        int(p * rect_size * 1.1 + rect_size * 3.4 * x + screen.get_width() / 4),
+                        int(l * rect_size * 1.1 + rect_size * 3.4 * y),
+                        rect_size,
+                        rect_size
+                    )
+                )
+
+    def draw_cube(self, screen):
+        self.draw_side(screen, 0, 1, 0)
+        self.draw_side(screen, 4, 0, 1)
+        self.draw_side(screen, 1, 1, 1)
+        self.draw_side(screen, 2, 2, 1)
+        self.draw_side(screen, 3, 3, 1)
+        self.draw_side(screen, 5, 1, 2)
+        pg.display.update()
+
+
     def horizontal_turn(self, row, direction):
         if (row >= 0 and row <= 2) and (direction == 0 or direction == 1):
             if direction == 0: # Left
