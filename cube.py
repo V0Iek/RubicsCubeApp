@@ -64,7 +64,6 @@ class RubicsCube:
         self.draw_side(screen, 2, 2, 1)
         self.draw_side(screen, 3, 3, 1)
         self.draw_side(screen, 5, 1, 2)
-        pg.display.update()
 
 
     def horizontal_turn(self, row, direction):
