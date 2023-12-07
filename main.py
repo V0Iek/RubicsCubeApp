@@ -30,7 +30,6 @@ def back():
     buttons = [btn_scramble, btn_solve, btn_playground, btn_exit]
 
     screen.fill(background_color)
-    cube.draw_cube(screen)
 
 def ext():
     global running
@@ -83,7 +82,8 @@ while running:
         else:
             button.draw(button.color)
 
-    cube.draw_cube(screen)
+    # cube.draw_cube(screen)
+    cube.project_cube(screen)
     pg.display.flip()
 
 

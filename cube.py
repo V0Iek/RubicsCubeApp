@@ -1,5 +1,7 @@
 from random import randint
 import pygame as pg
+import numpy as np
+from math import radians, sin, cos
 
 from translate import translate
 
@@ -64,6 +66,84 @@ class RubicsCube:
         self.draw_side(screen, 2, 2, 1)
         self.draw_side(screen, 3, 3, 1)
         self.draw_side(screen, 5, 1, 2)
+
+    
+    def project_cube(self, screen):
+        self.project_element(screen, .5, .5, .5)
+        pass
+
+    def project_element(self, screen, x, y ,z):
+        scale = 150
+
+        pos = [screen.get_width() / 2, screen.get_height() / 2.5]
+
+        angle_x = radians(22.5)
+        angle_y = radians(45)
+        angle_z = radians(0)
+
+        points = []
+
+        points.append(np.matrix([-.5, -.5, .5]))
+        points.append(np.matrix([.5, -.5, .5]))
+        points.append(np.matrix([.5, .5, .5]))
+        points.append(np.matrix([-.5, .5, .5]))
+        points.append(np.matrix([-.5, -.5, -.5]))
+        points.append(np.matrix([.5, -.5, -.5]))
+        points.append(np.matrix([.5, .5, -.5]))
+        points.append(np.matrix([-.5, .5, -.5]))
+        
+
+        projection_matrix = np.matrix([
+            [1, 0, 0],
+            [0, 1, 0]
+        ])
+
+        projected_points = [ [n, n] for n in range(len(points)) ]
+
+        i = 0
+        for point in points:
+            rotated2d = np.dot(self.calc_rot_y(angle_y), point.reshape((3, 1)))
+            rotated2d = np.dot(self.calc_rot_x(angle_x), rotated2d)
+            rotated2d = np.dot(self.calc_rot_z(angle_z), rotated2d)
+            projected2d = np.dot(projection_matrix, rotated2d)
+
+            x = int(projected2d[0][0] * scale) + pos[0]
+            y = int(projected2d[1][0] * scale) + pos[1]
+
+            projected_points[i] = [x, y]
+
+            pg.draw.circle(screen, (255, 0, 0), (x, y), 5)
+
+            i += 1
+
+        # for p in range(4):
+        #     self.connect_points(screen, p, (p + 1) % 4, projected_points)
+        #     self.connect_points(screen, p, p + 4, projected_points)
+        #     self.connect_points(screen, p + 4, (p + 1) % 4 + 4, projected_points)
+
+    def connect_points(self, screen, i, j, points):
+        pg.draw.line(screen, (0, 0, 255), (points[i][0], points[i][1]), (points[j][0], points[j][1]), 3)
+
+    def calc_rot_x(self, angle):
+        return np.matrix([
+            [1, 0, 0],
+            [0, cos(angle), -sin(angle)],
+            [0, sin(angle), cos(angle)]
+        ])
+    
+    def calc_rot_y(self, angle):
+        return np.matrix([
+            [cos(angle), 0, sin(angle)],
+            [0, 1, 0],
+            [-sin(angle), 0, cos(angle)]
+        ])
+    
+    def calc_rot_z(self, angle):
+        return np.matrix([
+            [cos(angle), -sin(angle), 0],
+            [sin(angle), cos(angle), 0],
+            [0, 0, 1]
+        ])
 
 
     def horizontal_turn(self, row, direction):
