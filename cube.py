@@ -69,10 +69,9 @@ class RubicsCube:
 
     
     def project_cube(self, screen):
-        self.project_element(screen, .5, .5, .5)
-        pass
+        self.project_element(screen, 0, 0, 0)
 
-    def project_element(self, screen, x, y ,z):
+    def project_element(self, screen, off_x, off_y, off_z):
         scale = 150
 
         pos = [screen.get_width() / 2, screen.get_height() / 2.5]
@@ -83,15 +82,14 @@ class RubicsCube:
 
         points = []
 
-        points.append(np.matrix([-.5, -.5, .5]))
-        points.append(np.matrix([.5, -.5, .5]))
-        points.append(np.matrix([.5, .5, .5]))
-        points.append(np.matrix([-.5, .5, .5]))
-        points.append(np.matrix([-.5, -.5, -.5]))
-        points.append(np.matrix([.5, -.5, -.5]))
-        points.append(np.matrix([.5, .5, -.5]))
-        points.append(np.matrix([-.5, .5, -.5]))
-        
+        points.append(np.matrix([-1.5, -1.5, 1.5]))
+        points.append(np.matrix([1.5, -1.5, 1.5]))
+        points.append(np.matrix([1.5, 1.5, 1.5]))
+        points.append(np.matrix([-1.5, 1.5, 1.5]))
+        points.append(np.matrix([-1.5, -1.5, -1.5]))
+        points.append(np.matrix([1.5, -1.5, -1.5]))
+        points.append(np.matrix([1.5, 1.5, -1.5]))
+        points.append(np.matrix([-1.5, 1.5, -1.5]))
 
         projection_matrix = np.matrix([
             [1, 0, 0],
