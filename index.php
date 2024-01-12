@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="pl">
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="description" content=""/>
@@ -25,7 +25,7 @@
 			<div id="main">
 				<nav>
 					<div class="menunav"> <a href="timer.php"> Timer </a> </div>
-					<div class="menunav"> <a href="algorithms.php"> Algorithms </a> </div>
+					<div class="menunav"> <a href="algorithms"> Algorithms </a> </div>
 					<div class="menunav"> <a href="moves.php"> Moves </a> </div>
 					<div class="menunav"> <a href="solver.php"> Solver </a> </div>
 					<div style="clear: both;"></div>
