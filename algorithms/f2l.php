@@ -26,36 +26,72 @@
                         
                         <div class="case"> <img src="../img/f2lcases/1.png" alt="case 1"> R U' R' U2 R U R' </div>
                         <div class="case"> <img src="../img/f2lcases/2.png" alt="case 2"> (R U R' U') (R U R' U') R U R' </div>
-                        <div class="case"> <img src="../img/f2lcases/3.png" alt="case 3">  </div>
+                        <div class="case"> <img src="../img/f2lcases/3.png" alt="case 3"> R U' R' U R U' R' U R U R' </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/4.png" alt="case 4">  </div>
-                        <div class="case"> <img src="../img/f2lcases/5.png" alt="case 5">  </div>
-                        <div class="case"> <img src="../img/f2lcases/6.png" alt="case 6">  </div>
+                        <div class="case"> <img src="../img/f2lcases/4.png" alt="case 4"> R U' R' y U' L' U2 L U2 L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/5.png" alt="case 5"> y L' U2 L y' R U2 R' U2 R U' R' </div>
+                        <div class="case"> <img src="../img/f2lcases/6.png" alt="case 6"> R U2 R' y L' U2 L' U2 L' U L </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/7.png" alt="case 7">  </div>
-                        <div class="case"> <img src="../img/f2lcases/8.png" alt="case 8">  </div>
-                        <div class="case"> <img src="../img/f2lcases/9.png" alt="case 9">  </div>
+                        <div class="case"> <img src="../img/f2lcases/7.png" alt="case 7"> U R U2 R' U' R U R' U2 R U' R' </div>
+                        <div class="case"> <img src="../img/f2lcases/8.png" alt="case 8"> (R U R' U') R U R' U2' y L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/9.png" alt="case 9"> R U R' </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/10.png" alt="case 10">  </div>
-                        <div class="case"> <img src="../img/f2lcases/11.png" alt="case 11">  </div>
-                        <div class="case"> <img src="../img/f2lcases/12.png" alt="case 12">  </div>
+                        <div class="case"> <img src="../img/f2lcases/10.png" alt="case 10"> y L' U' L </div>
+                        <div class="case"> <img src="../img/f2lcases/11.png" alt="case 11"> U' R U R' U R U R' </div>
+                        <div class="case"> <img src="../img/f2lcases/12.png" alt="case 12"> y U L' U' L U' L' U' L </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/13.png" alt="case 13">  </div>
-                        <div class="case"> <img src="../img/f2lcases/14.png" alt="case 14">  </div>
-                        <div class="case"> <img src="../img/f2lcases/15.png" alt="case 15">  </div>
+                        <div class="case"> <img src="../img/f2lcases/13.png" alt="case 13"> R U2 R' U2 R U2 R' U2 R U' R' </div>
+                        <div class="case"> <img src="../img/f2lcases/14.png" alt="case 14"> y L' U2 L U2 L' U2 L U2 L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/15.png" alt="case 15"> U' R U' R' U R U R' </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/16.png" alt="case 16">  </div>
-                        <div class="case"> <img src="../img/f2lcases/17.png" alt="case 17">  </div>
-                        <div class="case"> <img src="../img/f2lcases/18.png" alt="case 18">  </div>
+                        <div class="case"> <img src="../img/f2lcases/16.png" alt="case 16"> y U L' U L U' L' U' L </div>
+                        <div class="case"> <img src="../img/f2lcases/17.png" alt="case 17"> y U' L' U L <br> Dw' L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/18.png" alt="case 18"> U R U' R' </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/19.png" alt="case 19">  </div>
-                        <div class="case"> <img src="../img/f2lcases/20.png" alt="case 20">  </div>
-                        <div class="case"> <img src="../img/f2lcases/21.png" alt="case 21">  </div>
+                        <div class="case"> <img src="../img/f2lcases/19.png" alt="case 19"> y U L' U2 L U2 L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/20.png" alt="case 20"> U' R U2 R' U2 R U' R' </div>
+                        <div class="case"> <img src="../img/f2lcases/21.png" alt="case 21"> U' R U R' U2 R U' R' </div>
                         <div style="clear: both;"></div>
-                        <div class="case"> <img src="../img/f2lcases/22.png" alt="case 22">  </div>
-                        <div class="case"> <img src="../img/f2lcases/23.png" alt="case 23">  </div>
-                        <div class="case"> <img src="../img/f2lcases/24.png" alt="case 24">  </div>
+                        <div class="case"> <img src="../img/f2lcases/22.png" alt="case 22"> y U L' U' L U2 L' U L </div>
+                        <div class="case"> <img src="../img/f2lcases/23.png" alt="case 23"> F' U F U2 R U R' </div>
+                        <div class="case"> <img src="../img/f2lcases/24.png" alt="case 24"> R U' R' y U2 L' U' L </div>
                         <div style="clear: both;"></div>
+                    </section>
+
+                    <section>
+                        <header> <h3> 1 piece is in the correct slot <h3> </header>
+                    </section>
+
+                    <section>
+                        <header> <h3> Both pieces are in the correct slot <h3> </header>
+                    </section>
+                </article>
+
+                <article>
+                    <section>
+                        <header> <h3> Edge is in the wrong slot <h3> </header>
+                    </section>
+
+                    <section>
+                        <header> <h3> Corner is in the wrong slot <h3> </header>
+                    </section>
+                </article>
+
+                <article>
+                    <section>
+                        <header> <h3> Corner is solved <h3> </header>
+                    </section>
+
+                    <section>
+                        <header> <h3> Pair in the wrong slot <h3> </header>
+                    </section>
+
+                    <section>
+                        <header> <h3> Flipped Edge & Corner In Adjacent Slot <h3> </header>
+                    </section>
+
+                    <section>
+                        <header> <h3> Other <h3> </header>
                     </section>
                 </article>
             </div>

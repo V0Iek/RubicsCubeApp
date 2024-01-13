@@ -21,6 +21,12 @@ h3 { font-size: 28px; }
     border-radius: 15px;
 }
 
+article { border-bottom: 2px dashed var(--ctp-mocha-green); }
+article:last-child { border-bottom: 0px; }
+
+section { border-bottom: 2px dashed var(--ctp-mocha-sapphire); }
+section:last-child { border-bottom: 0px; }
+
 .case {
     float: left;
 
@@ -30,7 +36,15 @@ h3 { font-size: 28px; }
     margin: 10px;
     padding: 10px;
 
+    text-align: center;
+
     background-color: var(--ctp-mocha-surface0);
 
     border-radius: 10px;
+}
+
+.case > img {
+    float: left;
+
+    margin-top: 30px;
 }
