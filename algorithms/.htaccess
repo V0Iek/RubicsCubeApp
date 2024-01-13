@@ -5,4 +5,5 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule learn-how-to-solve-rubics-cube index.php
+RewriteRule algorithms algorithms.php
+RewriteRule f2l-algorithms f2l.php

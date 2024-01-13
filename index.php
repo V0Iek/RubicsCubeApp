@@ -25,7 +25,7 @@
 			<div id="main">
 				<nav>
 					<div class="menunav"> <a href="timer.php"> Timer </a> </div>
-					<div class="menunav"> <a href="algorithms"> Algorithms </a> </div>
+					<div class="menunav"> <a href="algorithms/algorithms"> Algorithms </a> </div>
 					<div class="menunav"> <a href="moves.php"> Moves </a> </div>
 					<div class="menunav"> <a href="solver.php"> Solver </a> </div>
 					<div style="clear: both;"></div>

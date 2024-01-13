@@ -12,7 +12,7 @@
         <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <![endif]-->
 
-        <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="../style.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -24,10 +24,10 @@
         <main>
             <div id="main">
                 <nav>
-                    <div class="menunav"> <a href="f2l.php"> F2L </a> </div>
+                    <div class="menunav"> <a href="f2l-algorithms"> <img src="../img/f2l.webp" alt=""> <br> F2L </a> </div>
                     <div class="menunav"> <a href="oll.php"> OLL </a> </div>
                     <div class="menunav"> <a href="pll.php"> PLL </a> </div>
-                    <div class="menunav"> <a href="learn-how-to-solve-rubics-cube"> Back </a> </div>
+                    <div class="menunav"> <a href="../learn-how-to-solve-rubics-cube"> Back </a> </div>
                     <div style="clear: both;"></div>
                 </nav>
             </div>

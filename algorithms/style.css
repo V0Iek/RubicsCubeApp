@@ -9,7 +9,7 @@ h1 { font-size: 56px; }
 h3 { font-size: 28px; }
 
 #main {
-    width: 1000px;
+    width: 1200px;
     
     margin-left: auto;
     margin-right: auto;
@@ -21,35 +21,16 @@ h3 { font-size: 28px; }
     border-radius: 15px;
 }
 
-.menunav {
+.case {
     float: left;
 
-    width: 480px;
-    height: 480px;
+    width: 360px;
+    height: 160px;
 
     margin: 10px;
+    padding: 10px;
 
     background-color: var(--ctp-mocha-surface0);
 
     border-radius: 10px;
-
-    transition: all .2s ease-in-out;
 }
-.menunav:hover { background-color: var(--ctp-mocha-surface1); }
-
-.menunav > a {
-    display: block;
-
-    width: 400px;
-    height: 400px;
-
-    padding: 40px;
-
-    text-align: center;
-    text-decoration: none;
-
-    font-size: 36px;
-
-    color: var(--ctp-mocha-sapphire);
-}
-.menunav > a:visited { color: var(--ctp-mocha-sapphire); }
