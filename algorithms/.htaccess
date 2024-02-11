@@ -5,5 +5,5 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule algorithms algorithms.php
-RewriteRule f2l-algorithms f2l.php
+RewriteRule algorithms algorithms.html
+RewriteRule f2l-algorithms f2l.html

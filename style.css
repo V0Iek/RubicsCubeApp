@@ -1,55 +1,75 @@
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+@import url("https://unpkg.com/@catppuccin/palette/css/catppuccin.css");
 
-body { font-family: 'Open Sans', sans-serif; color: var(--ctp-mocha-text); background-color: var(--ctp-mocha-mantle); }
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--ctp-mocha-text);
+  background-color: var(--ctp-mocha-mantle);
+}
 
-h1, h2, h3, h4, h5, h6 { text-align: center; color: var(--ctp-mocha-red); }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  color: var(--ctp-mocha-red);
+}
 
-h1 { font-size: 56px; }
+h1 {
+  font-size: 56px;
+}
 
-h3 { font-size: 28px; }
+h3 {
+  font-size: 28px;
+}
 
 #main {
-    width: 1000px;
-    
-    margin-left: auto;
-    margin-right: auto;
+  width: 1000px;
 
-    padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
 
-    background-color: var(--ctp-mocha-base);
+  padding: 20px;
 
-    border-radius: 15px;
+  background-color: var(--ctp-mocha-base);
+
+  border-radius: 15px;
 }
 
 .menunav {
-    float: left;
+  float: left;
 
-    width: 480px;
-    height: 480px;
+  width: 480px;
+  height: 480px;
 
-    margin: 10px;
+  margin: 10px;
 
-    background-color: var(--ctp-mocha-surface0);
+  background-color: var(--ctp-mocha-surface0);
 
-    border-radius: 10px;
+  border-radius: 10px;
 
-    transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.menunav:hover { background-color: var(--ctp-mocha-surface1); }
+.menunav:hover {
+  background-color: var(--ctp-mocha-surface1);
+}
 
 .menunav > a {
-    display: block;
+  display: block;
 
-    width: 400px;
-    height: 400px;
+  width: 400px;
+  height: 400px;
 
-    padding: 40px;
+  padding: 40px;
 
-    text-align: center;
-    text-decoration: none;
+  text-align: center;
+  text-decoration: none;
 
-    font-size: 36px;
+  font-size: 36px;
 
-    color: var(--ctp-mocha-sapphire);
+  color: var(--ctp-mocha-sapphire);
 }
-.menunav > a:visited { color: var(--ctp-mocha-sapphire); }
+.menunav > a:visited {
+  color: var(--ctp-mocha-sapphire);
+}

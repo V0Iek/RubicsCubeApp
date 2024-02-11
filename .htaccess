@@ -5,4 +5,5 @@ Deny from all
 </FilesMatch>
 
 RewriteEngine on
-RewriteRule learn-how-to-solve-rubics-cube index.php
+RewriteRule learn-how-to-solve-rubics-cube index.html
+RewriteRule timer timer.html
